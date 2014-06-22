@@ -1,4 +1,4 @@
-FROM yandex/ubuntu
+FROM yandex/trusty
 
 ADD exim.debconf /root/
 RUN debconf-set-selections < /root/exim.debconf && DEBIAN_FRONTEND=noninteractive apt-get install -y exim4
